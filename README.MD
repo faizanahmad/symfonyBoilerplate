@@ -1,30 +1,71 @@
-composer create-project symfony/skeleton symfonyBoilerplate
+##Setting Up Symfony Boilerplate
 
+###Create new Symfony Project
+`composer create-project symfony/skeleton symfonyBoilerplate`
+
+###Initialize new git repository
+```
 git init
+git add .
+git commit -m "Initial Commit"
+```
+
+###Add required packages/bundles
 
 composer require server --dev
 
-git add .
-git commit -m "Initial Commit"
+composer require debug --dev
+
+composer require sec-checker --dev
+
+composer require profiler --dev
 
 composer require annotations
 
 composer require generator
 
-composer require debug --dev
-
-composer unpack debug
-
 composer require asset
 
 composer require doctrine
 
-#Adding Security Checker
-composer require sec-checker --dev
+composer require swiftmailer-bundle
 
-#Adding Twig
 composer require twig
 
-#Symfony Profiler
-composer require profiler --dev
+###FOS User Bundle
+composer require friendsofsymfony/user-bundle "~2.0"
 
+create a new fiel /config/packages/fos_user.yml
+```
+fos_user:
+  db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+  firewall_name: main
+  user_class: App\Entity\User
+  from_email:
+      address: "admin@thedevclan.com"
+      sender_name: "TheDevClan"
+```
+
+Create a new User entity
+
+php bin/console make:entity
+
+```
+use FOS\UserBundle\Model\User as BaseUser;
+Class User extends BaseUser 
+{
+}
+```
+
+ in `config\packages\framework.yml` add
+ 
+ ```
+ framework:
+    templating:
+        engines: ['twig', 'php']
+ ```
+ 
+ Create & Run Migrations
+ 
+ `php bin/console doctrine:migrations:diff`
+ `php bin/console doctrine:migrations:migrate`
