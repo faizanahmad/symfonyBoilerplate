@@ -69,5 +69,18 @@ https://symfony.com/doc/master/bundles/FOSUserBundle/index.htm`
 
 Create & Run Migrations
  
- `php bin/console doctrine:migrations:diff`
- `php bin/console doctrine:migrations:migrate`
+`php bin/console doctrine:migrations:diff`
+`php bin/console doctrine:migrations:migrate`
+ 
+###Adding SonataAdminBundle
+``composer require sonata-project/admin-bundle``
+
+``composer require sonata-project/doctrine-orm-admin-bundle``
+
+https://symfony.com/doc/master/bundles/SonataAdminBundle/getting_started/installation.html
+
+###Create Admin User
+``php bin/console fos:user:create``
+
+``php bin/console fos:user:promote``
+ 

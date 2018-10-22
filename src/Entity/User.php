@@ -17,9 +17,27 @@ class User extends BaseUser
      */
     protected $id;
 
+    private $newPass;
+
     public function __construct()
     {
         parent::__construct();
         // your own logic
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNewPass()
+    {
+        return $this->newPass;
+    }
+
+    /**
+     * @param mixed $newPass
+     */
+    public function setNewPass($newPass): void
+    {
+        $this->newPass = $newPass;
     }
 }
