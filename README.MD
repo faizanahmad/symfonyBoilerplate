@@ -64,8 +64,10 @@ Class User extends BaseUser
     templating:
         engines: ['twig', 'php']
  ```
- 
- Create & Run Migrations
+Further FOSUserBundle Docs
+https://symfony.com/doc/master/bundles/FOSUserBundle/index.htm` 
+
+Create & Run Migrations
  
  `php bin/console doctrine:migrations:diff`
  `php bin/console doctrine:migrations:migrate`

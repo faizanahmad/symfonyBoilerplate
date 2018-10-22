@@ -17,8 +17,9 @@ class User extends BaseUser
      */
     protected $id;
 
-    public function getId(): ?int
+    public function __construct()
     {
-        return $this->id;
+        parent::__construct();
+        // your own logic
     }
 }
