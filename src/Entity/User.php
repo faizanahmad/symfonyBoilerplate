@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
@@ -14,9 +15,13 @@ class User extends BaseUser
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"details"})
      */
     protected $id;
 
+    /**
+     * @Groups({"details"})
+     */
     private $newPass;
 
     public function __construct()

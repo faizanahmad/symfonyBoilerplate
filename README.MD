@@ -86,3 +86,12 @@ https://symfony.com/doc/master/bundles/SonataAdminBundle/getting_started/install
 
 ``php bin/console fos:user:promote``
  
+ 
+###Adding JWT Auth
+
+``composer require jwt-auth``
+
+https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md#prerequisites
+
+###Adding Serializer
+``composer require symfony/serializer``
