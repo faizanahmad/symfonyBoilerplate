@@ -77,6 +77,8 @@ Create & Run Migrations
 
 ``composer require sonata-project/doctrine-orm-admin-bundle``
 
+``composer require sonata-project/block-bundle``
+
 https://symfony.com/doc/master/bundles/SonataAdminBundle/getting_started/installation.html
 
 ###Create Admin User

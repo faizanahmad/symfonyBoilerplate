@@ -8,6 +8,7 @@
         "friendsofsymfony/user-bundle": "~2.0",
         "sensio/framework-extra-bundle": "^5.2",
         "sonata-project/admin-bundle": "^3.40",
+        "sonata-project/block-bundle": "^3.12",
         "sonata-project/doctrine-orm-admin-bundle": "^3.6",
         "symfony/asset": "*",
         "symfony/console": "*",

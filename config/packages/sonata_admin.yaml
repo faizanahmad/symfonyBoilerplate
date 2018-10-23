@@ -1,16 +1,30 @@
 sonata_admin:
-    title: 'Sonata Admin'
+    title: '%project_name%'
     dashboard:
         blocks:
-            - { type: sonata.admin.block.admin_list, position: left }
+            -
+              class:    col-lg-3 col-xs-6          # twitter bootstrap responsive code
+              position: top                        # zone in the dashboard
+              type:     sonata.admin.block.stats   # block id
+              settings:
+                  code:  admin.user    # admin code - service id
+                  icon:  fa-users                # font awesome icon
+                  text:  Total Users
+                  color: bg-aqua                   # colors: bg-green, bg-red and bg-aqua
+                  filters:                         # filter values
+                      edited: { value: 1 }
+            -
+              type: sonata.admin.block.admin_list
+              position: left
+              class: col-md-6
+
     security:
         handler: sonata.admin.security.handler.role
-
         role_admin: ROLE_ADMIN
         role_super_admin: ROLE_SUPER_ADMIN
 
 sonata_block:
     blocks:
-        sonata.user.block.account:
+        sonata.admin.block.stats:
         sonata.admin.block.admin_list:
             contexts: [admin]

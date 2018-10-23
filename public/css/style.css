@@ -1,0 +1,79 @@
+/* bootstrap overrides */
+.table-striped thead {
+    font-size: 120%;
+}
+.table tr.text-primary,
+.table td.text-primary {
+    color: #0000ee !important;
+}
+.table td.bg-primary {
+    background-color: #008000 !important;
+    color: #fff !important;
+}
+
+/* symfony overrides */
+.time-tracking-edit form label,
+.time-tracking-enter form label {
+    display: none !important;
+}
+.time-tracking-edit #form_workDate_time {
+    display:none;
+}
+
+/* custom css */
+#workdate-display,
+#workdate-display div {
+    display: inline;
+}
+
+/* report table set nowrap on all tds */
+.ReportsByProject table td {
+    white-space: nowrap;
+}
+
+.ReportsByProject table td.ok-to-wrap {
+    white-space: normal;
+}
+
+/* print style sheet for reports */
+@media print {
+    .sf-toolbar {
+        display: none !important;
+    }
+    body {
+        font-size: 9px !important;
+    }
+    *, *::before, *::after {
+        background: inherit !important;
+        color: inherit !important;
+    }
+    h1.page-header {
+        border-bottom: 1px solid #eee;
+        font-size: 26px;
+        margin: 0 0 20px;
+        padding-bottom: 9px;
+    }
+    .h2, h2 {
+        font-size: 18px !important;
+    }
+    .table > tbody > tr > td {
+        border: none !important;
+        line-height: 1.5em;
+        padding-top: 0;
+        padding-bottom: 2px;
+    }
+    .table > thead > tr {
+        border: none !important;
+    }
+    .table > thead > tr > th {
+        border-bottom: 1px solid #222 !important;
+    }
+    .table tr.text-primary,
+    .table td.text-primary {
+        color: #0000ee !important;
+    }
+    .table td.bg-primary {
+        background-color: #008000 !important;
+        color: #fff !important;
+    }
+}
