@@ -1,5 +1,9 @@
 sonata_admin:
     title: '%project_name%'
+#    title_logo: '/img/logo-small.png'
+    assets:
+        extra_stylesheets:
+          - '/css/sonata.css'
     dashboard:
         blocks:
             -
