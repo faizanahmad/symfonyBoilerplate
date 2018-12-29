@@ -12,11 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
 class UserController extends BaseController
 {
     /**
-     * @Route("/", methods={"GET"})
+     * @Route("/get", methods={"POST"})
      */
     public function index(Request $request)
     {
-        $id = $request->get('id');
+        $id = $request->request->get('id');
 
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository(User::class)->find($id);
@@ -35,6 +35,12 @@ class UserController extends BaseController
      */
     public function new(Request $request)
     {
+        $user = $this->getUser();
 
+//        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $response = $this->createApiResponse(['success'=>1], 200, ['details']);
+
+        return $response;
     }
 }

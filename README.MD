@@ -93,5 +93,17 @@ https://symfony.com/doc/master/bundles/SonataAdminBundle/getting_started/install
 
 https://github.com/lexik/LexikJWTAuthenticationBundle/blob/master/Resources/doc/index.md#prerequisites
 
+``composer require gesdinet/jwt-refresh-token-bundle``
+
+https://github.com/gesdinet/JWTRefreshTokenBundle
+
 ###Adding Serializer
 ``composer require symfony/serializer``
+
+
+``composer require symfony/apache-pack``
+
+
+``composer require symfony/translation``
+
+``composer require stof/doctrine-extensions-bundle``
