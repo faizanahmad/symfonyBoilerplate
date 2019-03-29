@@ -3,5 +3,5 @@ fos_user:
   firewall_name: main
   user_class: App\Entity\User
   from_email:
-      address: "admin@thedevclan.com"
-      sender_name: "TheDevClan"
+      address: "admin@example.com"
+      sender_name: "SymfonyBoilerplate"
