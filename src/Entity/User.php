@@ -24,6 +24,8 @@ class User extends BaseUser
      */
     private $newPass;
 
+    private $role;
+
     public function __construct()
     {
         parent::__construct();
@@ -44,5 +46,25 @@ class User extends BaseUser
     public function setNewPass($newPass): void
     {
         $this->newPass = $newPass;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param mixed $role
+     */
+    public function setRole($role): void
+    {
+        $this->role = $role;
+    }
+
+    public function getCsvRoles(  ) {
+        return implode(', ',$this->getRoles());
     }
 }
