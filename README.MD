@@ -107,3 +107,6 @@ https://github.com/gesdinet/JWTRefreshTokenBundle
 ``composer require symfony/translation``
 
 ``composer require stof/doctrine-extensions-bundle``
+
+##Create admin user
+``php bin/console pp:create-admin-user``
