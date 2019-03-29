@@ -50,7 +50,7 @@ class CreateAdminUserCommand extends Command
         $user->setUsername('admin');
         $user->setEmail('admin@example.com');
         $user->setPlainPassword('admin');
-        $user->isEnabled(true);
+        $user->setEnabled(true);
         $user->addRole("ROLE_SUPER_ADMIN");
 
         $this->em->persist($user);
