@@ -31,6 +31,16 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    doctrine.result_cache_provider: #        <==== new
+        class: Symfony\Component\Cache\DoctrineProvider
+        public: false
+        arguments:
+            - '@doctrine.result_cache_pool'
+    doctrine.system_cache_provider: #        <==== new
+        class: Symfony\Component\Cache\DoctrineProvider
+        public: false
+        arguments:
+            - '@doctrine.system_cache_pool'
     admin.user:
         class: App\Admin\UserAdmin
         arguments: [~, App\Entity\User, ~]

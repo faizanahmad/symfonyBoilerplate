@@ -19,10 +19,16 @@ doctrine:
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
+        metadata_cache_driver:
+            type: service
+            id: doctrine.system_cache_provider
+        query_cache_driver:
+            type: service
+            id: doctrine.system_cache_provider
+        result_cache_driver:
+            type: service
+            id: doctrine.result_cache_provider
         auto_mapping: true
-        metadata_cache_driver: array
-        query_cache_driver: array
-        result_cache_driver: array
         mappings:
             App:
                 is_bundle: false
